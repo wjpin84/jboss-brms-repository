@@ -15,7 +15,7 @@
 			<repositories>
 				<repository>
 					<id>central</id>
-					<url>http://central</url>
+					<url>http://localhost:8081</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -27,7 +27,7 @@
 			<pluginRepositories>
 				<pluginRepository>
 					<id>central</id>
-					<url>http://central</url>
+					<url>http://localhost:8081</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
