@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.jboss.quickstarts.brms</groupId>
-  <artifactId>bpms_project</artifactId>
-  <version>1.0.0</version>
-  <name>bpms-project</name>
-  <repositories>
-    <repository>
-      <id>bpms-m2-repo</id>
-      <name>BPM Suite M2 Repo</name>
-      <url>http://localhost:8082/business-central/maven2/</url>
-    </repository>
-  </repositories>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jboss.quickstarts.brms</groupId>
+	<artifactId>bpms_project</artifactId>
+	<version>1.0.0</version>
+	<name>bpms-project</name>
+	<repositories>
+		<repository>
+			<id>bpms-m2-repo</id>
+			<name>BPM Suite M2 Repo</name>
+			<url>http://localhost:8082/business-central/maven2/</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://localhost:8081/repository/maven-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshot</name>
+			<url>http://localhost:8081/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
