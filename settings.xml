@@ -1,12 +1,4 @@
 <settings>
-	<mirrors>
-		<mirror>
-			<!--This sends everything else to /public -->
-			<id>nexus</id>
-			<mirrorOf>*</mirrorOf>
-			<url>http://localhost:8081/repository/maven-public/</url>
-		</mirror>
-	</mirrors>
 	<profiles>
 		<profile>
 			<id>nexus</id>
@@ -42,11 +34,26 @@
 		<!--make the profile active all the time -->
 		<activeProfile>nexus</activeProfile>
 	</activeProfiles>
+
 	<servers>
 		<server>
-			<id>nexus</id>
+			<id>nexus-snapshots</id>
+			<username>admin</username>
+			<password>admin123</password>
+		</server>
+		<server>
+			<id>nexus-releases</id>
 			<username>admin</username>
 			<password>admin123</password>
 		</server>
 	</servers>
+
+	<mirrors>
+		<mirror>
+			<id>central</id>
+			<name>central</name>
+			<url>http://localhost:8081/repository/maven-group/</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
 </settings>
